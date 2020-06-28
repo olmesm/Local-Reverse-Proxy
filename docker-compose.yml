@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  proxy:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./conf/web.conf:/etc/nginx/conf.d/web.conf:ro"
